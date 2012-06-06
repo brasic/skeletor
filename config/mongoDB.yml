@@ -1,0 +1,24 @@
+Default: &defaults
+  user: skeletor
+  password: skeletor
+  host: localhost
+  port: 27017
+  database: skeletor
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: skeletor_test
+  <<: *defaults
+
+Staging:
+  database: skeletor_staging
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: skeletor_production
+  poolsize: 100
+  <<: *defaults
